@@ -29,13 +29,15 @@ class Worker(QThread):
 
     def make_request(self):
         try:
-            response = requests.get(f"https://api.example.com/files?days={self.days}",
-                                    headers={"Authorization": f"Bearer {self.api_key}"})
-            response.raise_for_status()
+            # Construct the API URL with filters
+            api_url = f"https://buckets.grayhatwarfare.com/api/v2/files?extensions=pfx&days={self.days}"
+            response = requests.get(api_url, headers={"Authorization": f"Bearer {self.api_key}"})
+            response.raise_for_status()  # Check for HTTP request errors
             return [file['url'] for file in response.json()['files']]
         except requests.RequestException as e:
             self.log_signal.emit(f"Failed to fetch data: {str(e)}")
             return []
+
 
     def download_file(self, url, dir_name):
         try:
