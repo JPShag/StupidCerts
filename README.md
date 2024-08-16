@@ -64,14 +64,3 @@ If you encounter any issues:
 ## Contributing
 
 Contributions to StupidCerts are welcome. Please feel free to fork the repository, make changes, and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
-
----
-
-### Explanation and Tips
-
-- **Clear and Concise Descriptions:** Each section of the README is designed to give users clear and concise information about what the project does, how to set it up, and how to use it.
-- **Formatting and Structure:** The README is formatted for easy reading, with clear headings and a logical flow from installation instructions to usage tips.
-- **Usage Instructions:** Detailed step-by-step usage instructions help new users get started without confusion.
-- **Troubleshooting:** A simple troubleshooting section addresses potential common issues to help users solve problems on their own.
-
-This README is a comprehensive guide that should help any user to understand and use your application effectively.
